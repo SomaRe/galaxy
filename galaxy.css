@@ -1,0 +1,83 @@
+body{
+    background: black;
+}
+
+#sun{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(yellow,red);
+    border-radius: 100%;
+    margin-left: -50px;
+    margin-top:  -50px;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes glow{
+    to { box-shadow: 0 0 50px orange;  }
+    from { box-shadow: 0 0 100px orange; }
+}
+
+#earthorbit{
+    position: absolute;
+    /*border: solid red 1px;*/
+    top:50%;
+    left:50%;
+    height: 450px;
+    width: 350px;
+    margin-left: -225px;
+    margin-top: -200px;
+    border-radius: 100%;
+    animation-name: orbit;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+#earth{
+    position: absolute;
+    top:300px;
+    width:50px;
+    height:50px;
+    background: #4b4bf2;
+    border-radius: 100%;
+}
+
+@keyframes orbit{
+    to{ transform:  rotate(0deg)}
+    from{ transform:  rotate(360deg)}
+}
+
+#moonorbit{
+     position: absolute;
+    /border: solid red 1px;
+    top:50%;
+    left:50%;
+    height: 100px;
+    width: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 100%;
+    animation-name: orbit;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+
+#moon{
+    position: absolute;
+    top:75px;
+    left: 0px;
+    width:20px;
+    height: 20px;
+    background: radial-gradient(white,black);
+    border-radius: 100%;
+}
+
